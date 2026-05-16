@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="tr" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ofis Uygulamaları — Ders Örnekleri</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- TOP BAR -->
+<header class="topbar">
+  <div class="topbar-left">
+    <div class="logo-icon">
+      <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="36" height="36" rx="8" fill="var(--accent)"/>
+        <path d="M9 10h18M9 18h12M9 26h15" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+      </svg>
+    </div>
+    <div class="logo-text">
+      <span class="logo-title">Ofis Uygulamaları</span>
+      <span class="logo-sub">Mesleki ve Teknik Anadolu Lisesi</span>
+    </div>
+  </div>
+  <div class="topbar-center">
+    <div class="search-wrap">
+      <svg class="search-icon" viewBox="0 0 20 20" fill="none"><circle cx="8.5" cy="8.5" r="5.5" stroke="currentColor" stroke-width="1.5"/><path d="M13 13l3.5 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+      <input type="text" id="searchInput" placeholder="Örnek ara..." autocomplete="off">
+    </div>
+  </div>
+  <div class="topbar-right">
+    <div class="theme-selector">
+      <button class="theme-btn active" data-theme="dark" title="Karanlık">🌙</button>
+      <button class="theme-btn" data-theme="light" title="Aydınlık">☀️</button>
+      <button class="theme-btn" data-theme="modern" title="Modern">⚡</button>
+      <button class="theme-btn" data-theme="classic" title="Klasik">📚</button>
+      <button class="theme-btn" data-theme="ocean" title="Okyanus">🌊</button>
+    </div>
+    <a href="https://github.com" class="github-btn" target="_blank">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12c0-5.523-4.477-10-10-10z"/></svg>
+      GitHub
+    </a>
+  </div>
+</header>
+
+<div class="layout">
+  <!-- SIDEBAR -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <span class="sidebar-label">ÜNİTE LİSTESİ</span>
+      <span class="total-badge" id="totalBadge">50</span>
+    </div>
+
+    <nav class="unit-nav" id="unitNav">
+      <!-- Units injected by JS -->
+    </nav>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main class="main-content" id="mainContent">
+    <!-- Welcome screen -->
+    <div class="welcome-screen" id="welcomeScreen">
+      <div class="welcome-icon">
+        <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="10" y="15" width="60" height="50" rx="5" stroke="var(--accent)" stroke-width="2"/>
+          <path d="M20 30h40M20 40h28M20 50h20" stroke="var(--accent)" stroke-width="2" stroke-linecap="round"/>
+          <rect x="48" y="42" width="20" height="16" rx="3" fill="var(--accent)" opacity="0.2" stroke="var(--accent)" stroke-width="1.5"/>
+          <path d="M52 50h12M52 54h8" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <h2>Bir örnek seçin</h2>
+      <p>Sol menüden bir ünite açın ve örnek seçin.</p>
+      <div class="stats-row">
+        <div class="stat-card"><span class="stat-n">3</span><span class="stat-l">Ünite</span></div>
+        <div class="stat-card"><span class="stat-n">50</span><span class="stat-l">Örnek</span></div>
+        <div class="stat-card"><span class="stat-n">5</span><span class="stat-l">Tema</span></div>
+      </div>
+    </div>
+
+    <!-- Example detail screen (hidden by default) -->
+    <div class="example-screen hidden" id="exampleScreen">
+      <div class="breadcrumb" id="breadcrumb"></div>
+      <div class="example-header">
+        <div class="example-icon-wrap" id="exIcon"></div>
+        <div>
+          <h1 id="exTitle"></h1>
+          <div class="example-meta">
+            <span class="ex-code" id="exCode"></span>
+            <span class="difficulty-badge" id="exDiff"></span>
+          </div>
+        </div>
+      </div>
+      <div class="unit-tag-row" id="exUnit"></div>
+
+      <h3 class="files-label">DOSYALARA ERİŞ</h3>
+      <div class="files-grid" id="filesGrid"></div>
+    </div>
+  </main>
+</div>
+
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
